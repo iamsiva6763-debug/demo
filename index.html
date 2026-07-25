@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Firebase Workspace & Realtime Chat</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- AUTHENTICATION CARD -->
+  <div id="auth-card" class="card">
+    <h2 id="form-title">Login</h2>
+    
+    <input type="email" id="email" placeholder="Email" required />
+    <input type="password" id="password" placeholder="Password" required />
+    
+    <button id="btn-submit" class="btn-primary">Log In</button>
+    <button id="btn-google" class="btn-google">Sign In with Google</button>
+    
+    <div id="error-msg" class="error"></div>
+    <span id="toggle-form" class="toggle-link">Need an account? Sign Up</span>
+  </div>
+
+  <!-- LOGGED-IN DASHBOARD LAYOUT -->
+  <div id="dashboard-view" class="dashboard-layout hidden">
+    
+    <!-- LEFT SIDEBAR (5 OPTIONS) -->
+    <aside class="sidebar">
+      <div class="brand">App Workspace</div>
+      <nav class="nav-menu">
+        <a href="#" class="nav-item active" data-target="option-1">Option 1: Chat</a>
+        <a href="#" class="nav-item" data-target="option-2">Option 2</a>
+        <a href="#" class="nav-item" data-target="option-3">Option 3</a>
+        <a href="#" class="nav-item" data-target="option-4">Option 4</a>
+        <a href="#" class="nav-item" data-target="option-5">Option 5</a>
+      </nav>
+    </aside>
+
+    <!-- MAIN CONTENT AREA -->
+    <div class="main-content">
+      
+      <!-- TOP NAVBAR -->
+      <header class="topbar">
+        <div id="page-title" class="page-title">Option 1: Realtime Chat</div>
+        
+        <!-- TOP RIGHT PROFILE & LOGOUT -->
+        <div class="profile-menu">
+          <div class="profile-info">
+            <div id="avatar" class="avatar">U</div>
+            <span id="profile-email" class="profile-email">user@example.com</span>
+          </div>
+          <button id="btn-logout" class="btn-danger-sm">Log Out</button>
+        </div>
+      </header>
+
+      <!-- CONTENT PANELS -->
+      <main class="content-body">
+        
+        <!-- OPTION 1: CHAT PANEL -->
+        <section id="option-1" class="view-panel">
+          <div class="chat-wrapper">
+            <div id="chat-messages" class="chat-box"></div>
+            <form id="chat-form" class="chat-input-row">
+              <input type="text" id="chat-input" placeholder="Type a message..." required autocomplete="off" />
+              <button type="submit" class="btn-primary-sm">Send</button>
+            </form>
+          </div>
+        </section>
+
+        <!-- OPTION 2 PANEL -->
+        <section id="option-2" class="view-panel hidden">
+          <h2>Option 2 Dashboard</h2>
+          <p>Content panel for Option 2.</p>
+        </section>
+
+        <!-- OPTION 3 PANEL -->
+        <section id="option-3" class="view-panel hidden">
+          <h2>Option 3 Settings</h2>
+          <p>Content panel for Option 3.</p>
+        </section>
+
+        <!-- OPTION 4 PANEL -->
+        <section id="option-4" class="view-panel hidden">
+          <h2>Option 4 Analytics</h2>
+          <p>Content panel for Option 4.</p>
+        </section>
+
+        <!-- OPTION 5 PANEL -->
+        <section id="option-5" class="view-panel hidden">
+          <h2>Option 5 User Profile</h2>
+          <p>Content panel for Option 5.</p>
+        </section>
+
+      </main>
+
+    </div>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>

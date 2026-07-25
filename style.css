@@ -1,0 +1,244 @@
+* { 
+  box-sizing: border-box; 
+  font-family: system-ui, -apple-system, sans-serif; 
+  margin: 0;
+  padding: 0;
+}
+
+body { 
+  background: #f0f2f5; 
+  min-height: 100vh;
+}
+
+/* AUTHENTICATION STYLES */
+.card { 
+  background: white; 
+  padding: 30px; 
+  border-radius: 10px; 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+  width: 350px; 
+  text-align: center; 
+  margin: 80px auto;
+}
+
+.hidden { 
+  display: none !important; 
+}
+
+input { 
+  width: 100%; 
+  padding: 10px; 
+  margin: 8px 0; 
+  border: 1px solid #ccc; 
+  border-radius: 6px; 
+}
+
+button { 
+  width: 100%; 
+  padding: 10px; 
+  margin-top: 10px; 
+  border: none; 
+  border-radius: 6px; 
+  cursor: pointer; 
+  font-weight: bold; 
+}
+
+.btn-primary { background: #0066ff; color: white; }
+.btn-google { background: #4285f4; color: white; }
+.toggle-link { color: #0066ff; cursor: pointer; font-size: 0.9rem; margin-top: 15px; display: block; }
+.error { color: #dc3545; font-size: 0.85rem; margin-top: 10px; text-align: left; }
+
+/* DASHBOARD LAYOUT */
+.dashboard-layout {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+/* LEFT SIDEBAR */
+.sidebar {
+  width: 240px;
+  background: #0f172a;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.brand {
+  padding: 20px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-bottom: 1px solid #1e293b;
+  letter-spacing: 0.5px;
+}
+
+.nav-menu {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0;
+}
+
+.nav-item {
+  color: #94a3b8;
+  text-decoration: none;
+  padding: 12px 20px;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+.nav-item:hover, .nav-item.active {
+  background: #1e293b;
+  color: #ffffff;
+  border-left: 4px solid #0066ff;
+}
+
+/* MAIN CONTENT CONTAINER */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: #f8fafc;
+}
+
+/* TOP NAVBAR */
+.topbar {
+  height: 60px;
+  background: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 25px;
+}
+
+.page-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+/* TOP RIGHT PROFILE MENU */
+.profile-menu {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.profile-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile-email {
+  font-size: 0.85rem;
+  color: #334155;
+  font-weight: 600;
+}
+
+.avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #0066ff;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 0.85rem;
+}
+
+.btn-danger-sm {
+  background: #dc2626;
+  color: white;
+  padding: 7px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.btn-danger-sm:hover {
+  background: #b91c1c;
+}
+
+.content-body {
+  padding: 20px;
+  flex: 1;
+  overflow-y: auto;
+}
+
+/* CHAT BOX STYLES */
+.chat-wrapper {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 110px);
+}
+
+.chat-box {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: #fafafa;
+}
+
+.chat-msg {
+  max-width: 65%;
+  padding: 8px 14px;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.chat-msg.mine {
+  background: #0066ff;
+  color: white;
+  align-self: flex-end;
+  border-bottom-right-radius: 2px;
+}
+
+.chat-msg.other {
+  background: #e2e8f0;
+  color: #0f172a;
+  align-self: flex-start;
+  border-bottom-left-radius: 2px;
+}
+
+.msg-sender {
+  font-size: 0.7rem;
+  opacity: 0.8;
+  display: block;
+  margin-bottom: 2px;
+}
+
+.chat-input-row {
+  display: flex;
+  padding: 12px;
+  gap: 10px;
+  border-top: 1px solid #e2e8f0;
+  background: white;
+}
+
+.chat-input-row input {
+  margin: 0;
+}
+
+.btn-primary-sm {
+  width: 90px;
+  margin: 0;
+  background: #0066ff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
